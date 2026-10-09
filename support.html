@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поддержка — MoyNormativ</title>
+    <meta name="description" content="Техническая поддержка приложения MoyNormativ («Мой норматив»)">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1d1d1f;
+            --text-secondary: #6e6e73;
+            --accent: #0071e3;
+            --border: #d2d2d7;
+            --card: #f5f5f7;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #000000;
+                --text: #f5f5f7;
+                --text-secondary: #a1a1a6;
+                --accent: #2997ff;
+                --border: #424245;
+                --card: #1c1c1e;
+            }
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            padding: 40px 20px;
+        }
+
+        .container { max-width: 720px; margin: 0 auto; }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle { color: var(--text-secondary); font-size: 15px; }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 36px 0 16px;
+            letter-spacing: -0.3px;
+        }
+
+        h3 { font-size: 18px; font-weight: 600; margin: 24px 0 12px; }
+
+        p { margin-bottom: 14px; }
+        ul { margin: 12px 0 16px 24px; }
+        li { margin-bottom: 8px; }
+
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+
+        .card h3 { margin-top: 0; }
+
+        .contact-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white !important;
+            padding: 14px 28px;
+            border-radius: 980px;
+            font-size: 17px;
+            font-weight: 500;
+            text-decoration: none !important;
+            margin-top: 12px;
+        }
+
+        .contact-button:hover { opacity: 0.9; }
+
+        .badge {
+            display: inline-block;
+            background: var(--card);
+            color: var(--text-secondary);
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+
+        details {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+        }
+
+        summary {
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 17px;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+
+        summary::after {
+            content: "+";
+            font-size: 24px;
+            color: var(--accent);
+            transition: transform 0.2s;
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        details p {
+            margin-top: 12px;
+            color: var(--text-secondary);
+        }
+
+        details p:first-of-type {
+            color: var(--text);
+            margin-top: 16px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        @media (max-width: 480px) {
+            body { padding: 24px 16px; font-size: 16px; }
+            h1 { font-size: 26px; }
+            h2 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Поддержка</h1>
+            <p class="subtitle">Приложение «Мой норматив» (MoyNormativ)</p>
+            <span class="badge">Версия 1.0</span>
+        </header>
+
+        <section>
+            <h2>Связаться с разработчиком</h2>
+            <p>Если у вас возникли вопросы, проблемы или предложения — напишите нам. Мы стараемся отвечать в течение 2–3 рабочих дней.</p>
+
+            <div class="card">
+                <h3>📧 Email</h3>
+                <p>Для всех вопросов — от багов до предложений:</p>
+                <a href="mailto:con-07-remand@icloud.com?subject=MoyNormativ%20—%20Поддержка" class="contact-button">
+                    Написать разработчику
+                </a>
+            </div>
+
+            <p style="font-size: 15px; color: var(--text-secondary); margin-top: 16px;">
+                При обращении опишите, пожалуйста, вашу ситуацию и укажите модель устройства и версию iOS — это ускорит решение.
+            </p>
+        </section>
+
+        <section>
+            <h2>Частые вопросы</h2>
+
+            <details>
+                <summary>Мои данные сохраняются? Что будет, если удалить приложение?</summary>
+                <p>Все ваши результаты хранятся локально на устройстве (SwiftData) и, если включён iCloud, синхронизируются в приватную базу вашего Apple ID.</p>
+                <p><strong>При удалении приложения локальные данные стираются</strong>, но данные в iCloud остаются. Если вы установите приложение заново и войдёте в тот же iCloud — результаты восстановятся.</p>
+            </details>
+
+            <details>
+                <summary>Как отключить или включить iCloud-синхронизацию?</summary>
+                <p>Откройте <strong>Настройки iOS → ваше имя → iCloud</strong> и проверьте, что MoyNormativ включён. Приложение автоматически синхронизирует данные, если iCloud активен.</p>
+                <p>Чтобы отключить синхронизацию только для этого приложения — найдите MoyNormativ в списке и выключите переключатель.</p>
+            </details>
+
+            <details>
+                <summary>Почему не отображаются нормативы для моей категории?</summary>
+                <p>Нормативы загружаются из базы данных приложения. Если для вашей возрастной ступени или особой категории нормативы ещё не добавлены — экран может быть пустым.</p>
+                <p>Напишите нам на email — укажите ваш возраст и категорию, мы постараемся добавить недостающие данные в следующем обновлении.</p>
+            </details>
+
+            <details>
+                <summary>Правильно ли приложение считает знак отличия?</summary>
+                <p>Приложение сравнивает ваш результат с нормативами из встроенной базы. Если вы заметили расхождение с официальными нормативами — сообщите нам, приложив скриншот.</p>
+                <p><strong>Важно:</strong> приложение не является официальным сервисом ГТО. Все нормативы приведены в справочных целях. Официальные данные — на <a href="https://www.gto.ru" target="_blank" rel="noopener">gto.ru</a>.</p>
+            </details>
+
+            <details>
+                <summary>Как сбросить профиль или удалить все результаты?</summary>
+                <p>Откройте приложение → вкладка <strong>«Главная»</strong> → иконка профиля в правом верхнем углу → <strong>«Настройки»</strong> → раздел <strong>«Опасная зона»</strong>.</p>
+                <p>Там доступны три опции:</p>
+                <ul>
+                    <li>Сбросить результаты этой ступени</li>
+                    <li>Сбросить всю историю</li>
+                    <li>Удалить профиль полностью</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Можно ли перенести данные на другое устройство?</summary>
+                <p>Да, если у вас включён iCloud и на обоих устройствах используется один и тот же Apple ID. Синхронизация происходит автоматически.</p>
+                <p>Если iCloud отключён — данные хранятся только на одном устройстве. В будущих версиях мы планируем добавить экспорт и импорт через файл.</p>
+            </details>
+
+            <details>
+                <summary>Приложение бесплатное? Будут ли реклама или подписка?</summary>
+                <p>Сейчас приложение <strong>полностью бесплатное</strong>, без рекламы и подписок.</p>
+                <p>Мы не используем сторонние SDK и не собираем аналитику. Если в будущем появятся платные функции — они будут опциональными, а базовый функционал останется бесплатным.</p>
+            </details>
+
+            <details>
+                <summary>Нашли баг или есть предложение?</summary>
+                <p>Напишите нам на <a href="mailto:con-07-remand@icloud.com?subject=MoyNormativ%20—%20Баг%20или%20предложение">con-07-remand@icloud.com</a>.</p>
+                <p>Для багов, пожалуйста, приложите:</p>
+                <ul>
+                    <li>Описание, что вы делали</li>
+                    <li>Что ожидали увидеть</li>
+                    <li>Что произошло на самом деле</li>
+                    <li>Скриншот или видео (если возможно)</li>
+                    <li>Модель iPhone и версию iOS</li>
+                </ul>
+            </details>
+        </section>
+
+        <section>
+            <h2>Полезные ссылки</h2>
+            <ul>
+                <li><a href="index.html">Политика конфиденциальности</a></li>
+                <li><a href="https://www.gto.ru" target="_blank" rel="noopener">Официальный сайт ГТО</a></li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>© 2026 MoyNormativ. Все права защищены.</p>
+            <p style="margin-top: 8px;">Приложение не является официальным сервисом Министерства спорта РФ.</p>
+        </footer>
+    </div>
+</body>
+</html>
